@@ -44,9 +44,13 @@ class Player {
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
-const enemy0 = new Enemy(50, 50, 10);
-const enemy1 = new Enemy(50, 100, 15);
-const allEnemies = [enemy0, enemy1];
+const slowEnemySpeed = 60;
+const fastEnemySpeed = 100;
+const enemyOffScreen = -101;
+const topEnemy = new Enemy(enemyOffScreen, 60, slowEnemySpeed);
+const midEnemy = new Enemy(enemyOffScreen, 145, fastEnemySpeed);
+const bottomEnemy = new Enemy(enemyOffScreen, 225, slowEnemySpeed);
+const allEnemies = [topEnemy, midEnemy, bottomEnemy];
 // Place the player object in a variable called player
 player = new Player(50, 150);
 
