@@ -31,29 +31,35 @@ class Player {
   contructor(x, y) {
     this.x = x;
     this.y = y;
+    this.speed = 5;
     this.sprite = 'images/char-horn-girl.png';
+  }
+  update() {
+    this.x = this.speed * dt;
+  }
+  render() {
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
   }
 }
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
-
 const enemy0 = new Enemy(50, 50, 10);
 const enemy1 = new Enemy(50, 100, 15);
 const allEnemies = [enemy0, enemy1];
 // Place the player object in a variable called player
-
+player = new Player(50, 150);
 
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
-document.addEventListener('keyup', function(e) {
-    var allowedKeys = {
-        37: 'left',
-        38: 'up',
-        39: 'right',
-        40: 'down'
-    };
-
-    player.handleInput(allowedKeys[e.keyCode]);
-});
+// document.addEventListener('keyup', function(e) {
+//     var allowedKeys = {
+//         37: 'left',
+//         38: 'up',
+//         39: 'right',
+//         40: 'down'
+//     };
+//
+//     player.handleInput(allowedKeys[e.keyCode]);
+// });
