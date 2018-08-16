@@ -1,5 +1,5 @@
 // Enemies our player must avoid
-class Enemy = {
+class Enemy {
     constructor(x, y, speed) {
       this.x = x;
       this.y = y;
@@ -31,6 +31,10 @@ Enemy.prototype.render = function() {
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
+
+const enemy0 = new Enemy(50, 50, 10);
+const enemy1 = new Enemy(50, 100, 15);
+const allEnemies = [enemy0, enemy1];
 // Place the player object in a variable called player
 
 
