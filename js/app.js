@@ -28,6 +28,13 @@ Enemy.prototype.render = function() {
 // This class requires an update(), render() and
 // a handleInput() method.
 
+class Player {
+  contructor(x, y) {
+    this.x = x;
+    this.y = y;
+    this.sprite = 'images/char-horn-girl.png';
+  }
+}
 
 // Now instantiate your objects.
 // Place all enemy objects in an array called allEnemies
