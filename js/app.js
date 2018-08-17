@@ -72,7 +72,8 @@ const allEnemies = [];
 // randomly generates an enemy, with position and speed random
 function generateEnemy() {
   const enemyY = enemyYArray[Math.floor(Math.random() * enemyYArray.length)];
-  const enemySpeed = enemySpeedArray[Math.floor(Math.random() * enemySpeedArray.length)];
+  const enemySpeed =
+      enemySpeedArray[Math.floor(Math.random() * enemySpeedArray.length)];
   const newEnemy = new Enemy(enemyOffScreen, enemyY, enemySpeed);
   allEnemies.push(newEnemy);
   clearInterval(timer);
