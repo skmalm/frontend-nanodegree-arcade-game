@@ -28,17 +28,17 @@ class Enemy {
 // a handleInput() method.
 
 class Player {
-  contructor(x, y) {
+  constructor(x, y) {
     this.x = x;
     this.y = y;
     this.speed = 5;
-    this.sprite = 'char-horn-girl.png';
+    this.sprite = 'images/char-horn-girl.png';
   }
   update() {
     this.x = this.speed;
   }
   render() {
-    // ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
+    ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
   }
 }
 
