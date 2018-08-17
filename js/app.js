@@ -14,22 +14,12 @@ class Enemy {
     update(dt) {
       this.x += this.speed * dt;
       enemyCollide(this);
-      // You should multiply any movement by the dt parameter
-      // which will ensure the game runs at the same speed for
-      // all computers.
     }
     // Draw the enemy on the screen, required method for game
     render() {
       ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
     }
 };
-
-// Now write your own player class
-// This class requires an update(), render() and
-// a handleInput() method.
-
-let xChange = 0;
-let yChange = 0;
 
 class Player {
   constructor(x, y) {
@@ -73,8 +63,6 @@ class Player {
   }
 }
 
-// Now instantiate your objects.
-// Place all enemy objects in an array called allEnemies
 const enemyOffScreen = -101;
 const enemyYArray = [60, 145, 225];
 const enemySpeedArray = [50, 100, 150, 200, 250];
@@ -88,11 +76,10 @@ function generateEnemy() {
   timer = setInterval(generateEnemy, parseInt(Math.random() * randomWidth));
 }
 const randomWidth = 2000;
-// The random range will be from 0 to 5000
+// The random range will be from 0 to 2000
 let timer = setInterval(generateEnemy, 100);
 // 100 = Initial timer when the page is first loaded
 
-// Place the player object in a variable called player
 player = new Player(202, 380);
 
 function enemyCollide(thisEnemy) {
