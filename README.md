@@ -1,3 +1,13 @@
+# Classic Arcade Game Clone
+
+## Acknowledgments
+
+Thanks to CSS-Tricks.com and Florent Schildknecht for helping me figure out how to generate Enemies on random intervals.
+
+In general, thanks to Udacity, Colt Steele, and Elie Schoppik for being my primary learning resources.
+
+## Note from Udacity
+
 frontend-nanodegree-arcade-game
 ===============================
 
