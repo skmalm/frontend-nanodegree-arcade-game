@@ -3,8 +3,6 @@ class Enemy {
     constructor(x, y, speed) {
       this.x = x;
       this.y = y;
-      this.left = this.x;
-      this.right = this.x + 101;
       this.speed = speed;
       // The image/sprite for our enemies, this uses
       // a helper we've provided to easily load images
