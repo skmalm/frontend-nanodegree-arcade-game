@@ -1,10 +1,33 @@
 # Classic Arcade Game Clone
 
+Basic clone of the classic arcade game Frogger. This was built as a project for Udacity's Front End Web Development Nanodegree.
+
+## How to Play
+
+Use the arrow keys to move the player character. Try to reach the water without hitting any bugs! If you hit a bug, you lose and your player character's position will be reset. If you reach the water, you have won and your player character's position will also be reset.
+
+## Files
+
+* css/style.css
+* index.html
+* js/app.js includes my work; part of the code provided by Udacity.
+* js/engine.js includes the game loop functionality, provided by Udacity
+* js/resources.js is an image loading utility provided by Udacity
+* images - this folder contains the images used, and some additional images for possible future features. These were provided by Udacity.
+
+## Dependencies
+
+There are no external dependencies.
+
+## Authors
+
+Sebastian Malm and Udacity
+
 ## Acknowledgments
 
 Thanks to CSS-Tricks.com and Florent Schildknecht for helping me figure out how to generate Enemies on random intervals.
 
-In general, thanks to Udacity, Colt Steele, and Elie Schoppik for being my primary learning resources.
+In general, thanks to Udacity, Colt Steele, Elie Schoppik, Pontus Alexander (Meth Meth Method), and Chris DeLeon for being my primary learning resources.
 
 ## Note from Udacity
 
