@@ -58,6 +58,7 @@ class Player {
   }
   winCheck() {
     if (this.y < 60) {
+      alert("You win!");
       this.reset();
     }
   }
