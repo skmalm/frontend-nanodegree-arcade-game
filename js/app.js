@@ -39,9 +39,12 @@ class Player {
   handleInput(keyCode) {
     if (keyCode === 'left') {
       this.x -= 101;
-    }
-    if (keyCode === 'right') {
+    } else if (keyCode === 'right') {
       this.x += 101;
+    } else if (keyCode === 'up') {
+      this.y -= 101;
+    } else if (keyCode === 'down') {
+      this.y += 101;
     }
   }
   update() {
