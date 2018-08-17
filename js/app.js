@@ -55,6 +55,10 @@ class Player {
   render() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
   }
+  reset() {
+    this.x = 202;
+    this.y = 380;
+  }
 }
 
 // Now instantiate your objects.
@@ -82,7 +86,7 @@ player = new Player(202, 380);
 function enemyCollide(thisEnemy) {
   if (player.x < (thisEnemy.x + 101) && (player.x + 101) > thisEnemy.x &&
       player.y < (thisEnemy.y + 101) && (player.y + 101) > thisEnemy.y) {
-    alert('you lost');
+    player.reset();
   }
 }
 
