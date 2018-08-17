@@ -27,15 +27,24 @@ class Enemy {
 // This class requires an update(), render() and
 // a handleInput() method.
 
+let xChange = 0;
+let yChange = 0;
+
 class Player {
   constructor(x, y) {
     this.x = x;
     this.y = y;
-    this.speed = 5;
     this.sprite = 'images/char-horn-girl.png';
   }
+  handleInput(keyCode) {
+    if (keyCode === 'left') {
+      this.x -= 101;
+    }
+    if (keyCode === 'right') {
+      this.x += 101;
+    }
+  }
   update() {
-    this.x = this.speed;
   }
   render() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
@@ -62,18 +71,18 @@ let timer = setInterval(generateEnemy, 1000);
 // 1000 = Initial timer when the page is first loaded
 
 // Place the player object in a variable called player
-player = new Player(50, 150);
+player = new Player(202, 380);
 
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
-// document.addEventListener('keyup', function(e) {
-//     var allowedKeys = {
-//         37: 'left',
-//         38: 'up',
-//         39: 'right',
-//         40: 'down'
-//     };
-//
-//     player.handleInput(allowedKeys[e.keyCode]);
-// });
+document.addEventListener('keyup', function(e) {
+    var allowedKeys = {
+        37: 'left',
+        38: 'up',
+        39: 'right',
+        40: 'down'
+    };
+
+    player.handleInput(allowedKeys[e.keyCode]);
+});
