@@ -77,7 +77,7 @@ class Player {
 // Place all enemy objects in an array called allEnemies
 const enemyOffScreen = -101;
 const enemyYArray = [60, 145, 225];
-const enemySpeedArray = [50, 100, 150, 200];
+const enemySpeedArray = [50, 100, 150, 200, 250];
 const allEnemies = [];
 function generateEnemy() {
   const enemyY = enemyYArray[Math.floor(Math.random() * enemyYArray.length)];
@@ -87,10 +87,10 @@ function generateEnemy() {
   clearInterval(timer);
   timer = setInterval(generateEnemy, parseInt(Math.random() * randomWidth));
 }
-const randomWidth = 5000;
+const randomWidth = 2000;
 // The random range will be from 0 to 5000
-let timer = setInterval(generateEnemy, 1000);
-// 1000 = Initial timer when the page is first loaded
+let timer = setInterval(generateEnemy, 100);
+// 100 = Initial timer when the page is first loaded
 
 // Place the player object in a variable called player
 player = new Player(202, 380);
