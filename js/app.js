@@ -3,6 +3,8 @@ class Enemy {
     constructor(x, y, speed) {
       this.x = x;
       this.y = y;
+      this.left = this.x;
+      this.right = this.x + 101;
       this.speed = speed;
       // The image/sprite for our enemies, this uses
       // a helper we've provided to easily load images
@@ -13,6 +15,7 @@ class Enemy {
     // Parameter: dt, a time delta between ticks
     update(dt) {
       this.x += this.speed * dt;
+      enemyCollide(this);
       // You should multiply any movement by the dt parameter
       // which will ensure the game runs at the same speed for
       // all computers.
@@ -42,9 +45,9 @@ class Player {
     } else if (keyCode === 'right') {
       this.x += 101;
     } else if (keyCode === 'up') {
-      this.y -= 101;
+      this.y -= 80;
     } else if (keyCode === 'down') {
-      this.y += 101;
+      this.y += 80;
     }
   }
   update() {
@@ -76,6 +79,12 @@ let timer = setInterval(generateEnemy, 1000);
 // Place the player object in a variable called player
 player = new Player(202, 380);
 
+function enemyCollide(thisEnemy) {
+  if (player.x < (thisEnemy.x + 101) && (player.x + 101) > thisEnemy.x &&
+      player.y < (thisEnemy.y + 101) && (player.y + 101) > thisEnemy.y) {
+    alert('you lost');
+  }
+}
 
 // This listens for key presses and sends the keys to your
 // Player.handleInput() method. You don't need to modify this.
