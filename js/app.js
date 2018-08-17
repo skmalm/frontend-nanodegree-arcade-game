@@ -64,9 +64,12 @@ class Player {
 }
 
 const enemyOffScreen = -101;
+// array of the three different enemy y positions
 const enemyYArray = [60, 145, 225];
+// array of all possible enemy speeds
 const enemySpeedArray = [50, 100, 150, 200, 250];
 const allEnemies = [];
+// randomly generates an enemy, with position and speed random
 function generateEnemy() {
   const enemyY = enemyYArray[Math.floor(Math.random() * enemyYArray.length)];
   const enemySpeed = enemySpeedArray[Math.floor(Math.random() * enemySpeedArray.length)];
@@ -76,13 +79,14 @@ function generateEnemy() {
   timer = setInterval(generateEnemy, parseInt(Math.random() * randomWidth));
 }
 const randomWidth = 2000;
-// The random range will be from 0 to 2000
+// set the random time interval range to 0-2000
 let timer = setInterval(generateEnemy, 100);
-// 100 = Initial timer when the page is first loaded
+// set the initial delay before first enemy to 100ms
 
 player = new Player(202, 380);
 
 function enemyCollide(thisEnemy) {
+  // set player & enemy dimensions to be reasonable for playability
   let playerLeft = player.x + 16;
   let playerRight = player.x + 85;
   let playerTop = player.y + 89;
