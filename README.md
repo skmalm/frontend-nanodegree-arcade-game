@@ -2,6 +2,10 @@
 
 Basic clone of the classic arcade game Frogger. This was built as a project for Udacity's Front End Web Development Nanodegree.
 
+## Getting started
+
+To play, download the entire repository, then open index.html in a web browser. I've currently only tested the game with Google Chrome, so I'd recommend using Chrome for now.
+
 ## How to Play
 
 Use the arrow keys to move the player character. Try to reach the water without hitting any bugs! If you hit a bug, you lose and your player character's position will be reset. If you reach the water, you have won and your player character's position will also be reset.
