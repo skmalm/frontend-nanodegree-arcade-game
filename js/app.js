@@ -59,6 +59,7 @@ class Player {
     }
   }
   update() {
+    this.winCheck();
   }
   render() {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
@@ -66,6 +67,11 @@ class Player {
   reset() {
     this.x = 202;
     this.y = 380;
+  }
+  winCheck() {
+    if (this.y < 60) {
+      this.reset();
+    }
   }
 }
 
