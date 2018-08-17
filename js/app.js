@@ -96,8 +96,16 @@ let timer = setInterval(generateEnemy, 1000);
 player = new Player(202, 380);
 
 function enemyCollide(thisEnemy) {
-  if (player.x < (thisEnemy.x + 101) && (player.x + 101) > thisEnemy.x &&
-      player.y < (thisEnemy.y + 101) && (player.y + 101) > thisEnemy.y) {
+  let playerLeft = player.x + 16;
+  let playerRight = player.x + 85;
+  let playerTop = player.y + 89;
+  let playerBottom = player.y + 139;
+  let enemyLeft = thisEnemy.x + 2;
+  let enemyRight = thisEnemy.x + 98;
+  let enemyTop = thisEnemy.y + 77;
+  let enemyBottom = thisEnemy.y + 143;
+  if (playerLeft < enemyRight && playerRight > enemyLeft &&
+      playerTop < enemyBottom && playerBottom > enemyTop) {
     player.reset();
   }
 }
